@@ -1,3 +1,7 @@
+a {
+    margin-left: 5px;
+}
+
 h3 {
     margin: 10px 0px;
     text-align: center;
@@ -52,22 +56,25 @@ h3 {
 }
 
 .contenedor2 {
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .contenedor2__parrafo {
+    margin: 5px;
     font-size: 40px;
 }
 
 .contenedor2__cajaFixed {
+    position: fixed;
+    padding-left: 5px;
+    margin-top: -22px;
     background: yellow;
     opacity: 0.6;
-    position: fixed;
-    margin-top: -20px;
 }
 
 .contenedor2__cajaSticky {
     padding-top: 20px;
+    padding-left: 5px;
     background: orangered;
     opacity: 0.8;
     position: sticky;
