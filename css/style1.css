@@ -158,3 +158,27 @@ h3 {
 .contenedor8::first-letter {
     font-size: 3em;
 }
+
+.contenedor8__form {
+    position: relative;
+    margin: 5px 5px;
+    background: black;
+    display: block;
+    height: 50px;
+    width: 300px;
+}
+
+.contenedor8__form-input {
+    height: 20px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.contenedor8__form-input::placeholder {
+    color: grey;
+}
