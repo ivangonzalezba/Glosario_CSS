@@ -8,6 +8,7 @@ h3 {
     background: lightskyblue;
 }
 
+/*////Position: absolute////*/
 .contenedor1__caja1,
 .contenedor1__caja2,
 .contenedor1__caja3,
@@ -55,6 +56,7 @@ h3 {
     /*/////////////////////////////////*/
 }
 
+/*/////Position: fixed & sticky//////*/
 .contenedor2 {
     padding-top: 25px;
 }
@@ -67,7 +69,7 @@ h3 {
 .contenedor2__cajaFixed {
     position: fixed;
     padding-left: 5px;
-    margin-top: -22px;
+    margin-top: -23px;
     background: yellow;
     opacity: 0.6;
 }
@@ -86,15 +88,17 @@ h3 {
     padding-top: 20px;
 }
 
+/*Propiedad display: block, inline & inline-block*/
 .contenedor3,
 .contenedor4,
 .contenedor5 {
-    border: 3px solid black;
+    border: 2px solid red;
     display: block;
     width: 300px;
     height: 200px;
     position: relative;
     margin: 5px auto;
+    padding: 1px 1px;
 }
 
 .contenedor3__caja1,
@@ -104,6 +108,7 @@ h3 {
     height: 80px;
     width: 80px;
     background-color: sandybrown;
+    border: 2px solid black;
 }
 
 .contenedor4__caja1,
@@ -111,6 +116,7 @@ h3 {
     display: inline;
     text-align: center;
     background-color: sandybrown;
+    border: 2px solid black;
 }
 
 .contenedor5__caja1,
@@ -120,15 +126,19 @@ h3 {
     height: 80px;
     width: 80px;
     background-color: sandybrown;
+    border: 2px solid black;
 }
 
+/*////////////OVERFLOW/////////////*/
 .contenedor6 {
     margin: auto;
+    padding: 0 5px;
     margin-top: 10px;
-    border: 3px solid black;
+    border: 2px solid black;
     background: burlywood;
+    text-align: left;
     height: 250px;
-    width: 250px;
+    width: 255px;
     /*'auto' detecta si es necesario el scroll. 'scroll' lo agrega aunque no se use. 'Hiden' oculta el scroll*/
     overflow: auto;
 }
@@ -151,7 +161,7 @@ h3 {
     margin-right: 10px;
 }
 
-/*PSEUDO-ELEMENTOS*/
+/*/////PSEUDO-ELEMENTOS/////*/
 /*las propiedades de pseudo-elementos no funcionan en elementos con display de tipo 'inline'*/
 
 .contenedor7__parrafo1 {
@@ -188,4 +198,9 @@ h3 {
 
 .contenedor8__form-input::placeholder {
     color: grey;
+}
+
+.contenedor8__form-input::selection {
+    background: #ff0000;
+    color: #ffffff;
 }
