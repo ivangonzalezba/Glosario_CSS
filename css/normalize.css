@@ -4,5 +4,6 @@
 }
 
 body {
-    margin: 5px;
+    border-left: 5px dashed darkslategray;
+    border-right: 5px dashed darkslategray;
 }
