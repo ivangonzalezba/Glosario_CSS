@@ -2,3 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    border-left: 5px dashed darkslategray;
+    border-right: 5px dashed darkslategray;
+}

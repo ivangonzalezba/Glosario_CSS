@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina 2</title>
-    <link rel="stylesheet" href="css/style1.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
@@ -15,15 +15,107 @@
     <ul>
         <a href="index.html">Index</a>
         <a href="pag1.html">Página 1</a>
+        <a href="pag2.html">...</a>
+        <a href="pag3.html">Página 3</a>
     </ul>
-    <h3 class="titulo1">Position: absolute</h3>
-    <div class="contenedor1">
-        <div class="contenedor1__caja1">caja1</div>
-        <div class="contenedor1__caja2">caja2</div>
-        <div class="contenedor1__caja3">caja3</div>
-        <div class="contenedor1__caja4">caja4</div>
-        <div class="contenedor1__caja5">caja5</div>
-
+    <h3 class="titulo7">Pseudo-clases</h3>
+    <div class="contenedor9">
+        <strong>Hover</strong>
+        <br>
+        <p>Pasar el mouse sobre la caja para notar la diferencia</p>
+        <div class="contenedor9__cajaHover">cajaHover</div>
+        <br>
+        <strong>Active</strong>
+        <br>
+        <p>Mientras el elemento este activo, se aplican los valores establecidos</p>
+        <div class="contenedor9__cajaActive">Active</div>
+        <br>
+        <strong>Focus</strong>
+        <p>Se aplican los nuevos valores mientras el elemento se encuentre en estado focus</p>
+        <input class="contenedor9__cajaFocus" placeholder="Focus" type="text">
+        <br><br>
+        <strong>Link & visited</strong>
+        <br>
+        <p>Los link visitados son color rojo y los que no, verdes</p>
+        <a class="contenedor9__a" href="https://github.com/IvanBlues">Perfil GitHub</a>
+        <a class="contenedor9__a" href="https://youtube.com">Youtube</a>
+        <a class="contenedor9__a" href="linkinexistente">Link inexistente</a>
+        <br><br>
+        <strong>Lang</strong>
+        <br>
+        <p lang="es">Texto con la propiedad "lang" seteada en español</p>
+        <p lang="en">Texto con la propiedad "lang" seteada en ingles</p>
+    </div>
+    <h3 class="titulo8">Object-Fit</h3>
+    <div class="contenedor10">
+        <strong class="contenedor10__strong1">Contain</strong>
+        <strong class="contenedor10__strong2">Cover</strong>
+        <strong class="contenedor10__strong3">Fill</strong>
+        <strong class="contenedor10__strong4">None</strong>
+        <br>
+        <div class="contenedor10__div1">
+            <img class="contenedor10__div1-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor10__div2">
+            <img class="contenedor10__div2-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor10__div3">
+            <img class="contenedor10__div3-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor10__div4">
+            <img class="contenedor10__div4-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <br>
+        <strong>La propiedad "Scale-down" elige la mejor opcion entre cover y none</strong>
+    </div>
+    <h3 class="titulo9">Object-Fit + Position</h3>
+    <div class="contenedor11">
+        <strong class="contenedor11__strong1">Contain + left</strong>
+        <strong class="contenedor11__strong2">Cover + top</strong>
+        <strong class="contenedor11__strong3">Fill + right</strong>
+        <strong class="contenedor11__strong4">None + bottom</strong>
+        <br>
+        <div class="contenedor11__div1">
+            <img class="contenedor11__div1-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor11__div2">
+            <img class="contenedor11__div2-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor11__div3">
+            <img class="contenedor11__div3-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <div class="contenedor11__div4">
+            <img class="contenedor11__div4-img1"
+                src="https://multipress.com.mx/wp-content/uploads/2016/09/interna-imagen.jpg" alt="">
+        </div>
+        <br>
+    </div>
+    <h3 class="titulo10">Cursores</h3>
+    <div class="contenedor12">
+        <div class="contenedor12__caja1">Crosshair</div>
+        <div class="contenedor12__caja2">Pointer</div>
+        <div class="contenedor12__caja3">Progress</div>
+        <div class="contenedor12__caja4">Move</div>
+        <div class="contenedor12__caja5">Not-Allowed</div>
+    </div>
+    <h3 class="titulo11">Colores</h3>
+    <div class="contenedor13">
+        <p class="contenedor13__p">
+            Color-Name: RED <br>
+            RGB: (255, 0, 0) <br>
+            RGBA: (255, 0, 0, 1) <br>
+            HEX: #ff0000</p>
+        <div class="contenedor13__caja1"></div>
+        <div class="contenedor13__caja2"></div>
+    </div>
+    <h3 class="link1"><a href="pag3.html">Siguiente página</a></h3>
 </body>
 
 </html>
