@@ -501,6 +501,7 @@ p:lang(en) {
 }
 
 /*///////RESPONSIVE-DESIGN////////*/
+
 .contenedor14 {
     margin-bottom: 410px;
 }
@@ -541,6 +542,7 @@ p:lang(en) {
     background: #8ed877;
 }
 
+/*Codigo css que se activa si la pantalla es menor a 600px de ancho*/
 @media only screen and (max-width: 600px) {
     .contenedor14 {
         margin-bottom: 0;
@@ -575,4 +577,42 @@ p:lang(en) {
     .contenedor14__div5 {
         height: 400px;
     }
+}
+
+/*////////FLEXBOX////////*/
+
+.contenedor15 {
+    display: flex;
+}
+
+.contenedor15__div1,
+.contenedor15__div2,
+.contenedor15__div3 {
+    margin: 5px;
+    padding: 5px;
+    background: #464545;
+    color: #f5f5f5;
+}
+
+.contenedor15__div1-p-strong {
+    color: #ffa500;
+}
+
+/*row-reverse*/
+.contenedor15-2 {
+    flex-direction: row-reverse;
+}
+
+/*flex-wrap*/
+.contenedor15-3 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+
+.contenedor15-3__div1,
+.contenedor15-3__div2,
+.contenedor15-3__div3 {
+    min-width: 300px;
+    width: 400px;
 }
