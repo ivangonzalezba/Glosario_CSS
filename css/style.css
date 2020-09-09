@@ -1,5 +1,6 @@
 a {
     margin-left: 5px;
+    color: #4b70b4;
 }
 
 h3 {
@@ -26,14 +27,17 @@ h3 {
 
 .nav a {
     text-align: center;
+    text-decoration: none;
     width: 70px;
     margin: 0;
     padding: 10px 0;
+    color: lightskyblue;
 }
 
 .nav a:hover {
-    background: cornflowerblue;
-    border-bottom: 2px solid rgb(50, 35, 255);
+    background: lightskyblue;
+    color: #4b70b4;
+    border-bottom: 3px solid #4b70b4;
 }
 
 /*////Position: absolute////*/
@@ -189,11 +193,14 @@ h3 {
     margin-right: 10px;
 }
 
-/*/////PSEUDO-ELEMENTOS/////*/
-/*las propiedades de pseudo-elementos no funcionan en elementos con display de tipo 'inline'*/
-
 .contenedor7__parrafo1 {
     border: 2px solid orange;
+}
+
+/*/////PSEUDO-ELEMENTOS/////*/
+/*las propiedades de pseudo-elementos no funcionan en elementos con display de tipo 'inline'*/
+.contenedor8 {
+    margin-bottom: 100px;
 }
 
 .flfl::first-line {
