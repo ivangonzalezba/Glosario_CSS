@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina 2</title>
+    <title>Pagina 3</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
@@ -12,11 +12,12 @@
 </head>
 
 <body>
-    <ul>
+    <ul class="nav">
         <a href="index.html">Index</a>
         <a href="pag1.html">Página 1</a>
         <a href="pag2.html">Página 2</a>
-        <a href="pag3.html">...</a>
+        <a href="#">...</a>
+        <a href="pag4.html">Página 4</a>
     </ul>
     <h3 class="titulo12">Responsive-design</h3>
     <div class="contenedor14">
@@ -28,8 +29,8 @@
         <div class="contenedor14__div3"></div>
     </div>
     <h3 class="titulo13">Flexbox</h3>
-    <strong>Por defecto, la propiedad flexbox modifica el ancho segun su contenido y respeta la altura de los
-        contenedores</strong>
+    <p>Por defecto, la propiedad flexbox modifica el ancho segun su contenido y respeta la altura de los
+        contenedores</p>
     <div class="contenedor15">
         <div class="contenedor15__div1">
             <p><strong class="contenedor15__div1-p-strong">Caja1</strong> Lorem ipsum dolor sit amet consectetur,
@@ -48,6 +49,7 @@
                 incidunt in facere! Voluptas consectetur provident accusantium rem autem.</p>
         </div>
     </div>
+    <br>
     <strong>Flexbox + flex-direction: row reverse</strong>
     <div class="contenedor15 contenedor15-2">
         <div class="contenedor15__div1">
@@ -65,39 +67,113 @@
                 incidunt in facere! Voluptas consectetur provident accusantium rem autem.</p>
         </div>
     </div>
-    <strong>Flex-direction: column, para posicionar los contenedores de arriba hacia abajo y column-reverse para el caso
-        contrario</strong><br>
+    <p>Flex-direction: column, para posicionar los contenedores de arriba hacia abajo y column-reverse para el caso
+        contrario</p>
     <br>
     <strong>Flex-wrap: wrap, transporta los contenedores hacia abajo cuando tienen un ancho o ancho-minimo definido y no
         caben en la pantalla</strong>
     <div class="contenedor15-3">
         <div class="contenedor15__div1 contenedor15-3__div1">
-            <p><strong class="contenedor15__div1-p-strong">Caja1</strong> Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Provident error incidunt atque odio ipsa quam
-                corporis, delectus dolorum repellat tenetur voluptatem eum voluptatibus praesentium temporibus quis.
-                Laudantium reiciendis incidunt sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                expedita alias deleniti autem pariatur aspernatur, laudantium accusamus ratione minima tenetur molestias
-                incidunt in facere! Voluptas consectetur provident accusantium rem autem.</p>
+            <strong class="contenedor15__div1-p-strong">Caja1</strong>
         </div>
         <div class="contenedor15__div2 contenedor15-3__div2">
-            <p><strong class="contenedor15__div1-p-strong">Caja2</strong> Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Provident error incidunt atque odio ipsa quam
-                corporis, delectus dolorum repellat tenetur voluptatem eum voluptatibus praesentium temporibus quis.
-                Laudantium reiciendis incidunt sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                expedita alias deleniti autem pariatur aspernatur, laudantium accusamus ratione minima tenetur molestias
-                incidunt in facere! Voluptas consectetur provident accusantium rem autem.</p>
+            <strong class="contenedor15__div1-p-strong">Caja2</strong>
         </div>
         <div class="contenedor15__div3 contenedor15-3__div3">
-            <p><strong class="contenedor15__div1-p-strong">Caja3</strong> Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Provident error incidunt atque odio ipsa quam
-                corporis, delectus dolorum repellat tenetur voluptatem eum voluptatibus praesentium temporibus quis.
-                Laudantium reiciendis incidunt sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                expedita alias deleniti autem pariatur aspernatur, laudantium accusamus ratione minima tenetur molestias
-                incidunt in facere! Voluptas consectetur provident accusantium rem autem.</p>
+            <strong class="contenedor15__div1-p-strong">Caja3</strong>
         </div>
     </div>
-    <h3 class="titulo13">Otra cosa</h3>
-    <h3 class="link1"><a href="pag3.html">Siguiente página</a></h3>
+    <br>
+    <strong>Flex-wrap: nowarp + justify-content: space-evenly, mantiene los contenedores en una sola linea y calcula sus
+        margenes para ocupar el total de la pantalla</strong>
+    <div class="contenedor15-4">
+        <div class="contenedor15__div1 contenedor15-3__div1">
+            <strong class="contenedor15__div1-p-strong">Caja1</strong>
+        </div>
+        <div class="contenedor15__div2 contenedor15-3__div2">
+            <strong class="contenedor15__div1-p-strong">Caja2</strong>
+        </div>
+        <div class="contenedor15__div3 contenedor15-3__div3">
+            <strong class="contenedor15__div1-p-strong">Caja3</strong>
+        </div>
+    </div>
+    <br>
+    <strong>Nowarp + space-evenly + align-items: center, esta ultima propiedad centra los items verticlamente sin
+        cambiar la direccion del eje principal</strong>
+    <div class="contenedor15-5">
+        <div class="contenedor15__div1 contenedor15-3__div1">
+            <strong class="contenedor15__div1-p-strong">Caja1</strong>
+        </div>
+        <div class="contenedor15__div2 contenedor15-3__div2">
+            <strong class="contenedor15__div1-p-strong">Caja2</strong>
+        </div>
+        <div class="contenedor15__div3 contenedor15-3__div3">
+            <strong class="contenedor15__div1-p-strong">Caja3</strong>
+        </div>
+    </div>
+    <br>
+    <strong>Warp + space-evenly + align-content: center, esta ultima propiedad centra los items verticlamente sin
+        cambiar la direccion del eje principal</strong>
+    <div class="contenedor15-6">
+        <div class="contenedor15__div1 contenedor15-3__div1">
+            <strong class="contenedor15__div1-p-strong">Caja1</strong>
+        </div>
+        <div class="contenedor15__div2 contenedor15-3__div2">
+            <strong class="contenedor15__div1-p-strong">Caja2</strong>
+        </div>
+        <div class="contenedor15__div3 contenedor15-3__div3">
+            <strong class="contenedor15__div1-p-strong">Caja3</strong>
+        </div>
+    </div>
+    <h3 class="titulo14">Flexbox - Propiedades de los items</h3>
+    <strong>Aling-self, alinear un flex-item dentro del flex-container por separado</strong>
+    <div class="contenedor16">
+        <div class="contenedor16__div1">Caja1</div>
+        <div class="contenedor16__div2">Caja2</div>
+        <div class="contenedor16__div3">Caja3</div>
+        <div class="contenedor16__div4">Caja4</div>
+        <div class="contenedor16__div5 contenedor16__div5-2P">Caja5</div>
+    </div>
+    <br>
+    <strong>Margin, para centrar un flex-item dentro de un flex-container</strong>
+    <div class="contenedor17">
+        <div class="contenedor17__div1">Caja1</div>
+    </div>
+    <br>
+    <strong>Flex-grow, estira los flex-items para rellenar el ancho del flex-container</strong>
+    <div class="contenedor18">
+        <div class="contenedor18__div1">Caja1</div>
+        <div class="contenedor18__div2">Caja2</div>
+        <div class="contenedor18__div3">Caja3</div>
+        <div class="contenedor18__div4">Caja4</div>
+        <div class="contenedor18__div5">Caja5</div>
+    </div>
+    <br>
+    <strong>Flex-grow + min-width + wrap</strong>
+    <div class="contenedor19">
+        <div class="contenedor19__div1">Caja1</div>
+        <div class="contenedor19__div2">Caja2</div>
+        <div class="contenedor19__div3">Caja3</div>
+        <div class="contenedor19__div4">Caja4</div>
+        <div class="contenedor19__div5">Caja5</div>
+    </div>
+    <br>
+    <strong>Flex-basis, indica a partir de que resolucion el item se comporta igual que los demas + flex-shrink, esta
+        propiedad establece la capacidad de un flex-item para ceder
+        espacio</strong>
+    <p>En el siguiente ejemplo se aprecia como la caja 1 no cede espacio y solo se expande a partir de los 200px</p>
+    <div class="contenedor20">
+        <div class="contenedor20__div1 contenedor20__div1-1">Caja1</div>
+        <div class="contenedor20__div2">Caja2</div>
+        <div class="contenedor20__div3">Caja3</div>
+        <div class="contenedor20__div4">Caja4</div>
+        <div class="contenedor20__div5">Caja5</div>
+    </div>
+    <br>
+    <strong>Order: es como z-index pero en vez del eje z se basa en el main-axis</strong>
+    <br>
+    <h3 class="link1"><a href="pag4.html">Siguiente página</a></h3>
+    <h3 class="link1"><a href="pag2.html">Página anterior</a></h3>
 </body>
 
 </html>

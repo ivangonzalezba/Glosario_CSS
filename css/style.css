@@ -8,6 +8,34 @@ h3 {
     background: lightskyblue;
 }
 
+.indice {
+    width: 500px;
+    background: #2e4675;
+    color: white;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    height: 50px;
+    background: #4b70b4;
+    justify-content: center;
+}
+
+.nav a {
+    text-align: center;
+    width: 70px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav a:hover {
+    background: cornflowerblue;
+    border-bottom: 2px solid rgb(50, 35, 255);
+}
+
 /*////Position: absolute////*/
 .contenedor1__caja1,
 .contenedor1__caja2,
@@ -582,6 +610,7 @@ p:lang(en) {
 /*////////FLEXBOX////////*/
 
 .contenedor15 {
+    border: 3px solid #ff4500;
     display: flex;
 }
 
@@ -600,11 +629,13 @@ p:lang(en) {
 
 /*row-reverse*/
 .contenedor15-2 {
+    border: 3px solid #ff4500;
     flex-direction: row-reverse;
 }
 
 /*flex-wrap*/
 .contenedor15-3 {
+    border: 3px solid #ff4500;
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
@@ -613,6 +644,135 @@ p:lang(en) {
 .contenedor15-3__div1,
 .contenedor15-3__div2,
 .contenedor15-3__div3 {
-    min-width: 300px;
-    width: 400px;
+    width: 300px;
+    height: 200px;
+}
+
+/*nowrap + justify-content*/
+
+.contenedor15-4 {
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/*align-items*/
+.contenedor15-5 {
+    height: 500px;
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*align-content*/
+.contenedor15-6 {
+    height: 500px;
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/*flex-items*/
+.contenedor16 {
+    border: 3px solid #ff4500;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.contenedor16__div1,
+.contenedor16__div2,
+.contenedor16__div3,
+.contenedor16__div4,
+.contenedor16__div5 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    text-align: center;
+}
+
+.contenedor16__div5-2P {
+    align-self: flex-end;
+}
+
+/*centrar un flex-item dentro de un flex-container con margin*/
+.contenedor17 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor17__div1 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    margin: auto;
+}
+
+/*Flex-grow*/
+.contenedor18 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor18__div1,
+.contenedor18__div2,
+.contenedor18__div3,
+.contenedor18__div4,
+.contenedor18__div5 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+/*Flex-grow + min-widht + wrap*/
+.contenedor19 {
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.contenedor19__div1,
+.contenedor19__div2,
+.contenedor19__div3,
+.contenedor19__div4,
+.contenedor19__div5 {
+    min-width: 150px;
+    background: #ffa500;
+    margin: 5px;
+    flex-grow: 1;
+
+}
+
+/*Flex-grow + flex-shrink*/
+.contenedor20 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor20__div1,
+.contenedor20__div2,
+.contenedor20__div3,
+.contenedor20__div4,
+.contenedor20__div5 {
+    background: #ffa500;
+    margin: 5px;
+    min-width: 100px;
+    width: 200px;
+    flex-grow: 1;
+}
+
+.contenedor20__div1-1 {
+    flex-basis: 200px;
+    flex-shrink: 0;
 }
