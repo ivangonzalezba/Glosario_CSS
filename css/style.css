@@ -774,12 +774,87 @@ p:lang(en) {
 .contenedor20__div5 {
     background: #ffa500;
     margin: 5px;
-    min-width: 100px;
     width: 200px;
     flex-grow: 1;
 }
 
 .contenedor20__div1-1 {
-    flex-basis: 200px;
-    flex-shrink: 0;
+    flex-shrink: 2;
+}
+
+/*////////FORMULARIO FLEX/////////*/
+
+.contenedor21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #173a8a;
+    margin: 20px 50px;
+    border-radius: 10px;
+}
+
+.contenedor21__form {
+    min-width: 350px;
+    flex: 2;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.form__seccion {
+    padding-right: 10px;
+}
+
+.form__input {
+    margin: 3px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: 3px solid #385da3;
+    background: #173a8a;
+    color: white;
+    resize: none;
+    width: 100%;
+}
+
+.form__input:focus {
+    outline: none;
+    background: #4775ca;
+    background: linear-gradient(to bottom, transparent, #385da3);
+}
+
+.form__submit-input {
+    margin: 3px 0;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    background: #385da3;
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form__submit-input:hover {
+    background: #4775cc;
+}
+
+.form__submit-input:active {
+    background: #5993ff;
+}
+
+.form__img {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+}
+
+.form__img-div {
+    background: #385da3;
+    border-radius: 50%;
+    padding: 30px;
+    margin: auto;
+}
+
+.form__img img {
+    width: 200px;
 }

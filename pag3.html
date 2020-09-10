@@ -159,10 +159,10 @@
         <div class="contenedor19__div5">Caja5</div>
     </div>
     <br>
-    <strong>Flex-basis, indica a partir de que resolucion el item se comporta igual que los demas + flex-shrink, esta
-        propiedad establece la capacidad de un flex-item para ceder
+    <strong>Flex-shrink, esta propiedad establece la capacidad de un flex-item para ceder
         espacio</strong>
-    <p>En el siguiente ejemplo se aprecia como la caja 1 no cede espacio y solo se expande a partir de los 200px</p>
+    <p>En el siguiente ejemplo se aprecia como la caja 1 cede mas espacio que las demas cuando supera el ancho
+        establecido de 200px</p>
     <div class="contenedor20">
         <div class="contenedor20__div1 contenedor20__div1-1">Caja1</div>
         <div class="contenedor20__div2">Caja2</div>
@@ -171,8 +171,33 @@
         <div class="contenedor20__div5">Caja5</div>
     </div>
     <br>
-    <strong>Order: es como z-index pero en vez del eje z se basa en el main-axis</strong>
+    <strong>La forma abreviada de usar las propiedades mas comunes es 'flex: grow shrink basis;'</strong><br>
     <br>
+    <strong>Order: es como z-index pero en vez del eje z se basa en el main-axis, propio de los flex-container</strong>
+    <br>
+    <h3 class="titulo15">Formulario flex</h3>
+    <div class="contenedor21">
+        <form class="contenedor21__form">
+            <div class="form__seccion">
+                <input type="email" class="form__input" placeholder="E-Mail">
+            </div>
+            <div class="form__seccion">
+                <input type="text" class="form__input" placeholder="Asunto">
+            </div>
+            <div class="form__seccion">
+                <textarea cols="30" rows="10" class="form__input" placeholder="Escriba su mensaje aquí"></textarea>
+            </div>
+            <div class="form__submit">
+                <input type="submit" class="form__submit-input">
+            </div>
+        </form>
+        <div class="form__img">
+            <div class="form__img-div">
+                <img src="https://lh3.googleusercontent.com/proxy/6Rx3Fcw7EzF2IyCbIpTdhfYppfXBTbddVmhr9p8qRA1WX15SuWUmeirfCQYLE1rcVMGsnE8mkH2arMmfj_C2h27F6gqoHhmNBk3o1zZ8UM0qQLUW8KY"
+                    alt="">
+            </div>
+        </div>
+    </div>
     <h3 class="link1"><a href="pag4.html">Siguiente página</a></h3>
     <h3 class="link1"><a href="pag2.html">Página anterior</a></h3>
 </body>
