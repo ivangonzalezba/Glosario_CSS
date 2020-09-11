@@ -858,3 +858,30 @@ p:lang(en) {
 .form__img img {
     width: 200px;
 }
+
+/*/////////////////////GRID/////////////////////*/
+.contenedor22 {
+    display: grid;
+    border: 2px solid black;
+    background: radial-gradient(circle, #fff, #bbb);
+    /*se define el tamaño de las celdas*/
+    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+    margin: 20px;
+    padding: 20px;
+    /*espaciado entre celdas*/
+    gap: 10px;
+}
+
+.contenedor22__div {
+    border: 1px solid black;
+}
+
+/*seleccion de la celda*/
+.contenedor22__div:nth-child(1) {
+    grid-column: 1 / 4;
+}
+
+.contenedor22__div:nth-child(2) {
+    grid-row: 2 / 4;
+}
