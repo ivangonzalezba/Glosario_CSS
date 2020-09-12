@@ -1,11 +1,43 @@
 a {
     margin-left: 5px;
+    color: #4b70b4;
 }
 
 h3 {
     margin: 10px 0px;
     text-align: center;
     background: lightskyblue;
+}
+
+.indice {
+    width: 500px;
+    background: #2e4675;
+    color: white;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    height: 50px;
+    background: #4b70b4;
+    justify-content: center;
+}
+
+.nav a {
+    text-align: center;
+    text-decoration: none;
+    width: 70px;
+    margin: 0;
+    padding: 10px 0;
+    color: lightskyblue;
+}
+
+.nav a:hover {
+    background: lightskyblue;
+    color: #4b70b4;
+    border-bottom: 3px solid #4b70b4;
 }
 
 /*////Position: absolute////*/
@@ -161,11 +193,14 @@ h3 {
     margin-right: 10px;
 }
 
-/*/////PSEUDO-ELEMENTOS/////*/
-/*las propiedades de pseudo-elementos no funcionan en elementos con display de tipo 'inline'*/
-
 .contenedor7__parrafo1 {
     border: 2px solid orange;
+}
+
+/*/////PSEUDO-ELEMENTOS/////*/
+/*las propiedades de pseudo-elementos no funcionan en elementos con display de tipo 'inline'*/
+.contenedor8 {
+    margin-bottom: 100px;
 }
 
 .flfl::first-line {
@@ -501,6 +536,7 @@ p:lang(en) {
 }
 
 /*///////RESPONSIVE-DESIGN////////*/
+
 .contenedor14 {
     margin-bottom: 410px;
 }
@@ -541,6 +577,7 @@ p:lang(en) {
     background: #8ed877;
 }
 
+/*Codigo css que se activa si la pantalla es menor a 600px de ancho*/
 @media only screen and (max-width: 600px) {
     .contenedor14 {
         margin-bottom: 0;
@@ -575,4 +612,294 @@ p:lang(en) {
     .contenedor14__div5 {
         height: 400px;
     }
+}
+
+/*////////FLEXBOX////////*/
+
+.contenedor15 {
+    border: 3px solid #ff4500;
+    display: flex;
+}
+
+.contenedor15__div1,
+.contenedor15__div2,
+.contenedor15__div3 {
+    margin: 5px;
+    padding: 5px;
+    background: #464545;
+    color: #f5f5f5;
+}
+
+.contenedor15__div1-p-strong {
+    color: #ffa500;
+}
+
+/*row-reverse*/
+.contenedor15-2 {
+    border: 3px solid #ff4500;
+    flex-direction: row-reverse;
+}
+
+/*flex-wrap*/
+.contenedor15-3 {
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+
+.contenedor15-3__div1,
+.contenedor15-3__div2,
+.contenedor15-3__div3 {
+    width: 300px;
+    height: 200px;
+}
+
+/*nowrap + justify-content*/
+
+.contenedor15-4 {
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/*align-items*/
+.contenedor15-5 {
+    height: 500px;
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*align-content*/
+.contenedor15-6 {
+    height: 500px;
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/*flex-items*/
+.contenedor16 {
+    border: 3px solid #ff4500;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.contenedor16__div1,
+.contenedor16__div2,
+.contenedor16__div3,
+.contenedor16__div4,
+.contenedor16__div5 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    text-align: center;
+}
+
+.contenedor16__div5-2P {
+    align-self: flex-end;
+}
+
+/*centrar un flex-item dentro de un flex-container con margin*/
+.contenedor17 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor17__div1 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    margin: auto;
+}
+
+/*Flex-grow*/
+.contenedor18 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor18__div1,
+.contenedor18__div2,
+.contenedor18__div3,
+.contenedor18__div4,
+.contenedor18__div5 {
+    height: 150px;
+    width: 150px;
+    background: #ffa500;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+/*Flex-grow + min-widht + wrap*/
+.contenedor19 {
+    border: 3px solid #ff4500;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+}
+
+.contenedor19__div1,
+.contenedor19__div2,
+.contenedor19__div3,
+.contenedor19__div4,
+.contenedor19__div5 {
+    min-width: 150px;
+    background: #ffa500;
+    margin: 5px;
+    flex-grow: 1;
+
+}
+
+/*Flex-grow + flex-shrink*/
+.contenedor20 {
+    border: 3px solid #ff4500;
+    display: flex;
+    height: 300px;
+}
+
+.contenedor20__div1,
+.contenedor20__div2,
+.contenedor20__div3,
+.contenedor20__div4,
+.contenedor20__div5 {
+    background: #ffa500;
+    margin: 5px;
+    width: 200px;
+    flex-grow: 1;
+}
+
+.contenedor20__div1-1 {
+    flex-shrink: 2;
+}
+
+/*////////FORMULARIO FLEX/////////*/
+
+.contenedor21 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #173a8a;
+    margin: 20px 50px;
+    border-radius: 10px;
+}
+
+.contenedor21__form {
+    min-width: 350px;
+    flex: 2;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.form__seccion {
+    padding-right: 10px;
+}
+
+.form__input {
+    margin: 3px 0;
+    padding: 5px;
+    border: none;
+    border-bottom: 3px solid #385da3;
+    background: #173a8a;
+    color: white;
+    resize: none;
+    width: 100%;
+}
+
+.form__input:focus {
+    outline: none;
+    background: #4775ca;
+    background: linear-gradient(to bottom, transparent, #385da3);
+}
+
+.form__submit-input {
+    margin: 3px 0;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    background: #385da3;
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form__submit-input:hover {
+    background: #4775cc;
+}
+
+.form__submit-input:active {
+    background: #5993ff;
+}
+
+.form__img {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+}
+
+.form__img-div {
+    background: #385da3;
+    border-radius: 50%;
+    padding: 30px;
+    margin: auto;
+}
+
+.form__img img {
+    width: 200px;
+}
+
+/*/////////////////////GRID/////////////////////*/
+.contenedor22 {
+    display: grid;
+    border: 2px solid black;
+    background: radial-gradient(circle, #fff, #bbb);
+    /*se define el tamaño de las celdas*/
+    /*'repeat(4, 150px)' es igual a escribir 150px 4 veces*/
+    /*'1fr' esta medida estira la celda hasta el limite de su contenedor*/
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4, 150px);
+    margin: 20px;
+    padding: 20px;
+    /*espaciado entre celdas*/
+    gap: 10px;
+}
+
+.contenedor22__div {
+    border: 1px solid black;
+}
+
+/*seleccion de la celda*/
+.contenedor22__div:nth-child(7) {
+    grid-column: 3 / span 2;
+}
+
+.contenedor22__div:nth-child(9) {
+    grid-column: 2 / span 3;
+}
+
+.contenedorTexto {
+    margin: 10px;
+}
+
+/*grid automatica*/
+.contenedor23 {
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 150px;
+    border: 2px solid black;
+    background: radial-gradient(circle, #fff, #bbb);
+    margin: 20px;
+    padding: 20px;
+    gap: 10px;
 }
