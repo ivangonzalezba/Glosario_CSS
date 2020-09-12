@@ -865,8 +865,10 @@ p:lang(en) {
     border: 2px solid black;
     background: radial-gradient(circle, #fff, #bbb);
     /*se define el tamaño de las celdas*/
-    grid-template-rows: 150px 150px 150px 150px;
-    grid-template-columns: 150px 150px 150px;
+    /*'repeat(4, 150px)' es igual a escribir 150px 4 veces*/
+    /*'1fr' esta medida estira la celda hasta el limite de su contenedor*/
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4, 150px);
     margin: 20px;
     padding: 20px;
     /*espaciado entre celdas*/
@@ -878,10 +880,26 @@ p:lang(en) {
 }
 
 /*seleccion de la celda*/
-.contenedor22__div:nth-child(1) {
-    grid-column: 1 / 4;
+.contenedor22__div:nth-child(7) {
+    grid-column: 3 / span 2;
 }
 
-.contenedor22__div:nth-child(2) {
-    grid-row: 2 / 4;
+.contenedor22__div:nth-child(9) {
+    grid-column: 2 / span 3;
+}
+
+.contenedorTexto {
+    margin: 10px;
+}
+
+/*grid automatica*/
+.contenedor23 {
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 150px;
+    border: 2px solid black;
+    background: radial-gradient(circle, #fff, #bbb);
+    margin: 20px;
+    padding: 20px;
+    gap: 10px;
 }
