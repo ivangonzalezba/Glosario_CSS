@@ -1,0 +1,132 @@
+/*/////MEDIA QUERIES//////*/
+
+.contenedor30 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor30__header,
+.contenedor30__main,
+.contenedor30__aside,
+.contenedor30__footer {
+    padding: 20px;
+}
+
+.contenedor30__header {
+    background: orange;
+    flex-basis: 60px;
+}
+
+.contenedor30__main {
+    background: lightblue;
+    flex-basis: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+.contenedor30__aside {
+    background: lightcoral;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+}
+
+.contenedor30__footer {
+    background: orangered;
+    flex-basis: 60px;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 720px) {
+
+    .contenedor30 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px repeat(4, 1fr) 100px;
+        height: 100vh;
+    }
+
+    .contenedor30__header {
+        grid-column: 1 / span 3;
+    }
+
+    .contenedor30__main {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 4;
+    }
+
+    .contenedor30__aside {
+        grid-row: 2 / span 4;
+    }
+
+    .contenedor30__footer {
+        grid-column: 1 / span 3;
+        grid-row: 6 / span 1;
+    }
+}
+
+@media screen and (min-width: 980px) {
+
+    .contenedor30 {
+        grid-template-rows: 60px repeat(4, 1fr) 60px;
+    }
+}
+
+/*///////TRANSITION/////////*/
+.contenedor31 {
+    border: 3px solid black;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor31__div {
+    background: orange;
+    height: 200px;
+    width: 200px;
+}
+
+.contenedor31__div:first-child {
+    transition-property: background;
+    transition-duration: 1s;
+}
+
+.contenedor31__div:nth-child(2) {
+    transition-property: background;
+    transition-duration: 2s;
+    transition-delay: 1s;
+}
+
+.contenedor31__div:nth-child(3),
+.contenedor31__div:nth-child(4),
+.contenedor31__div:nth-child(5) {
+    position: relative;
+    top: 0px;
+    transition-property: background, top;
+    transition-duration: 2s, 2s;
+    transition-timing-function: linear;
+}
+
+.contenedor31__div:nth-child(4) {
+    transition-timing-function: ease;
+}
+
+.contenedor31__div:nth-child(5) {
+    transition-timing-function: ease-in;
+}
+
+.contenedor31__div:first-child:hover,
+.contenedor31__div:nth-child(2):hover {
+    background: orangered;
+}
+
+.contenedor31:hover>.contenedor31__div:nth-child(3),
+.contenedor31:hover>.contenedor31__div:nth-child(4),
+.contenedor31:hover>.contenedor31__div:nth-child(5) {
+    top: 100px;
+    background: orangered;
+}
+
+/*////////ANIMACIONES/////////*/
