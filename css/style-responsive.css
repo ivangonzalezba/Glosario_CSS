@@ -130,3 +130,307 @@
 }
 
 /*////////ANIMACIONES/////////*/
+/*Se declara la animacion con @keyframes y se utiliza con animation-name*/
+
+@keyframes miAnimacion {
+    0% {
+        background: lightseagreen;
+    }
+
+    25% {
+        background: lightsteelblue;
+    }
+
+    50% {
+        background: lightsalmon;
+    }
+
+    75% {
+        background: lightpink;
+    }
+
+    100% {
+        background: lightseagreen;
+    }
+}
+
+@keyframes animacionDeCarga {
+    0% {
+        right: 0px;
+        top: 0px;
+    }
+
+    25% {
+        right: 30px;
+        top: 30px;
+    }
+
+    50% {
+        right: 0px;
+        top: 60px;
+    }
+
+    75% {
+        right: -30px;
+        top: 30px;
+    }
+
+    100% {
+        right: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes animacionSinRep {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+        background: chocolate;
+    }
+}
+
+.contenedor32 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor32__div {
+    height: 100px;
+    width: 100px;
+    background: lightseagreen;
+}
+
+.contenedor32__div:first-child {
+    animation-name: miAnimacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.contenedor32__div:nth-child(2) {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    text-align: center;
+    animation-name: animacionDeCarga;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+.contenedor32__div:nth-child(3) {
+    animation-name: animacionSinRep;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    /*'alternate' alterna entre animacion normal y reverse*/
+    animation-direction: alternate;
+    /*con forwards logramos que el elemento se quede con el ultimo estado adquirido*/
+    /*both da al elemento los valores del inicio de la animacion antes de que esta comience*/
+    animation-fill-mode: forwards;
+    position: relative;
+    /*con 'cubic-bezier' define el movimiento de la transicion*/
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/*/////////TRANSFORM///////////*/
+
+.contenedor33 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor33__div {
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    text-align: center;
+    /*definimos la duracion de los transform*/
+    transition: transform 2s;
+}
+
+.contenedor33__div:first-child:hover {
+    /*traslada el elemento y lo escala el doble de su tamaño*/
+    transform: translateX(100px) scale(2, 2);
+}
+
+.contenedor33__div:nth-child(2):hover {
+    /*rota el elemento en los ejes x-y*/
+    transform: skew(30deg, 30deg);
+}
+
+.contenedor33__div-clip {
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    /*La cantidad de vertices de los clip-path deben concidir para que haya una transicion entre ellos*/
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    transition: clip-path 2s;
+}
+
+.contenedor33__div-clip:hover {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+/*///////////BACKGROUND/////////////*/
+.contenedor34 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor34__div {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    color: whitesmoke;
+    text-shadow: 2px 2px 0px black;
+    margin: auto;
+    background-image: url(https://tecnovortex.com/wp-content/uploads/2019/04/wallpaper-engine.jpg);
+}
+
+.contenedor34__div:first-child {
+    /*le doy una imagen de fondo al contenedor*/
+    background-size: cover;
+}
+
+.contenedor34__div:nth-child(2) {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contenedor34__div:nth-child(3) {
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor34__div:nth-child(4) {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*/////////VARIABLES//////////*/
+/*definimos una variable en el root para ser usada en cualquier lugar del documento*/
+:root {
+    --variableColorAzul: #1e90ff;
+    --variableTamaño: 250px;
+}
+
+.contenedor35 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor35__div {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+}
+
+.contenedor35__div:first-child {
+    /*usamos la variable "variableColorAzul"*/
+    background-color: var(--variableColorAzul);
+}
+
+.contenedor35__div:nth-child(2) {
+    /*redefinimos el color de la variable solo en este contenedor*/
+    --variableColorAzul: #ff7f50;
+    background-color: var(--variableColorAzul);
+}
+
+.contenedor35__div:nth-child(3) {
+    /*comprobamos que el valor de "variableColorAzul" sigue siendo el mismo que al principio*/
+    background-color: var(--variableColorAzul);
+    /*hacemos uso de una segunda variable*/
+    width: var(--variableTamaño);
+}
+
+/*///////FILTER////////*/
+.contenedor36 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor36__div {
+    height: 150px;
+    width: 150px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/300px-PNG_transparency_demonstration_1.png);
+    background-size: cover;
+    background-position: center;
+    color: midnightblue;
+}
+
+.contenedor36__div:nth-child(2) {
+    filter: blur(1px);
+}
+
+.contenedor36__div:nth-child(3) {
+    filter: brightness(2);
+}
+
+.contenedor36__div:nth-child(4) {
+    filter: drop-shadow(2px 2px 2px #000000) drop-shadow(2px 2px 2px #000000);
+}
+
+/*/////Ejemplo de animacion con filtro/////*/
+.contenedor37 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+    border: 2px solid black;
+    margin: auto;
+    /*  El contraste quita la difuminacion del blur en el elemento pero conserva su tamaño
+        El color de fondo es necesario para que el contraste funcione*/
+    filter: contrast(10);
+    background-color: #ffffff;
+}
+
+.contenedor37__div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: darkcyan;
+    /*Este blur es contrastado por su contenedor*/
+    filter: blur(10px);
+    text-align: center;
+}
+
+@keyframes fusionDeCirculos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(140px);
+    }
+}
+
+.contenedor37__div:first-child {
+    animation: fusionDeCirculos 2s alternate infinite;
+    animation-timing-function: linear;
+}
+
+/*//////////MAS PROPIEDADES/////////*/
+.contenedor38 {
+    width: 500px;
+    font-size: x-large;
+    margin: auto;
+    /*definimos el comportamiento del auto-scroll con
+    scroll-behavior: smooth;
+    aunque lo hacemos a todo el documento*/
+}
+
+.contenedor38__div:first-child p {
+    background-color: #f5deb3;
+    /*espaciado entre letras*/
+    letter-spacing: 3px;
+}
+
+.contenedor38__div:nth-child(2) {
+    background-color: #b3f5ea;
+    /*comportamiento de la seleccion*/
+    user-select: none;
+}
